@@ -1,10 +1,12 @@
 <template>
-$END$
+  <h1>
+    Hello How are You ?
+  </h1>
 </template>
 
 <script>
 export default {
-name: "another"
+  name: "another"
 }
 </script>
 
