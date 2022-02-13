@@ -179,29 +179,43 @@
 
         <!-- Brands -->
         <vue-slick-carousel
-          class="category-carousel"
+          class="category-carousel mb-16 text-center"
           v-bind="categoryCarouselSettings"
         >
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand1.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand1.png" alt="" />
+            </div>
           </div>
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand2.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand2.png" alt="" />
+            </div>
           </div>
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand3.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand3.png" alt="" />
+            </div>
           </div>
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand4.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand4.png" alt="" />
+            </div>
           </div>
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand5.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand5.png" alt="" />
+            </div>
           </div>
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand6.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand6.png" alt="" />
+            </div>
           </div>
-          <div class="flex items-center h-full">
-            <img src="~/assets/images/brand3.png" alt="" />
+          <div>
+            <div class="flex items-center justify-center h-32">
+              <img src="~/assets/images/brand3.png" alt="" />
+            </div>
           </div>
 
           <template #prevArrow="arrowOption">
