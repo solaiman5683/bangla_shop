@@ -49,7 +49,7 @@
 
     <div class="container">
       <!-- Category Section -->
-      <section class="mt-16">
+      <section class="py-12">
         <h3 class="text-xl font-medium mb-6">Search by Category</h3>
         <div class="flex items-center mb-8">
           <div
@@ -121,7 +121,7 @@
             </div>
           </div>
 
-          <template #prevArrow="arrowOption">
+          <template #prevArrow>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -137,7 +137,7 @@
               />
             </svg>
           </template>
-          <template #nextArrow="arrowOption">
+          <template #nextArrow>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -155,7 +155,7 @@
         </vue-slick-carousel>
       </section>
 
-      <section class="mt-16">
+      <section class="py-8">
         <div class="flex gap-6">
           <div class="w-1/2">
             <img src="~/assets/images/promo1.png" alt="" />
@@ -166,8 +166,67 @@
         </div>
       </section>
 
+      <!-- Featured Products -->
+      <section class="py-12">
+        <h3 class="text-xl font-medium mb-6">Deals of the Week</h3>
+        <div class="flex items-center mb-8">
+          <div
+            style="height: 4px"
+            class="w-1/12 bg-green-500 rounded-full"
+          ></div>
+          <div style="height: 2px" class="w-11/12 bg-gray-200"></div>
+        </div>
+
+        <!-- Products -->
+        <vue-slick-carousel
+          class="category-carousel"
+          v-bind="productCarouselSettings"
+        >
+          <SingleProduct />
+          <SingleProduct />
+          <SingleProduct />
+          <SingleProduct />
+          <SingleProduct />
+          <SingleProduct />
+          <SingleProduct />
+          <SingleProduct />
+
+          <template #prevArrow>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </template>
+          <template #nextArrow>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              /></svg
+          ></template>
+        </vue-slick-carousel>
+      </section>
+
       <!-- Brands Section -->
-      <section class="mt-16">
+      <section class="py-8">
         <h3 class="text-xl font-medium mb-6">Popular Brands</h3>
         <div class="flex items-center mb-8">
           <div
@@ -218,7 +277,7 @@
             </div>
           </div>
 
-          <template #prevArrow="arrowOption">
+          <template #prevArrow>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -234,7 +293,7 @@
               />
             </svg>
           </template>
-          <template #nextArrow="arrowOption">
+          <template #nextArrow>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -251,17 +310,104 @@
           ></template>
         </vue-slick-carousel>
       </section>
+      <!-- Collections -->
+      <section class="py-8">
+        <div class="flex gap-4">
+          <div class="w-1/3 p-4 rounded-xl flex bg-yellow-100">
+            <div class="flex py-4 pl-6 flex-col justify-around h-full w-1/2">
+              <h3 class="text-3xl">Fresh Fruits Collection</h3>
+              <nuxt-link
+                to="/"
+                class="h-12 w-12 rounded-full shadow bg-white flex items-center justify-center"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  /></svg
+              ></nuxt-link>
+            </div>
+            <div class="w-1/2">
+              <img width="100%" src="~/assets/images/fruits.png" alt="" />
+            </div>
+          </div>
+
+          <div class="w-1/3 p-4 rounded-xl flex bg-green-200">
+            <div class="flex py-4 pl-6 flex-col justify-around h-full w-1/2">
+              <h3 class="text-3xl">Vegetable Collection</h3>
+              <nuxt-link
+                to="/"
+                class="h-12 w-12 rounded-full shadow bg-white flex items-center justify-center"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  /></svg
+              ></nuxt-link>
+            </div>
+            <div class="w-1/2">
+              <img width="100%" src="~/assets/images/vegetable.png" alt="" />
+            </div>
+          </div>
+
+          <div class="w-1/3 p-4 rounded-xl flex bg-yellow-200">
+            <div class="flex py-4 pl-6 flex-col justify-around h-full w-1/2">
+              <h3 class="text-3xl">Grocery Item</h3>
+              <nuxt-link
+                to="/"
+                class="h-12 w-12 rounded-full shadow bg-white flex items-center justify-center"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  /></svg
+              ></nuxt-link>
+            </div>
+            <div class="w-1/2">
+              <img width="100%" src="~/assets/images/grocery.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
+import SingleProduct from '~/components/SingleProduct.vue'
 export default {
   name: 'IndexPage',
   data() {
     return {
       categoryCarouselSettings: {
         slidesToShow: 6,
+        slidesToScroll: 1,
+      },
+      productCarouselSettings: {
+        slidesToShow: 5,
         slidesToScroll: 1,
       },
     }

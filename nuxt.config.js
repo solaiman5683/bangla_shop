@@ -32,6 +32,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/vue-slick-carousel.js', ssr: false },
+    { src: '@/plugins/v-click-outside.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -50,15 +50,59 @@
       </div>
     </div>
     <div class="flex items-center">
-      <div
-        class="w-96 bg-green-500 cursor-pointer hover:bg-green-600 text-white py-4 px-6 rounded-full flex justify-between items-center"
-      >
-        <div class="min-w-max">
-          <img src="~/assets/images/menu-right.svg" alt="" />
+      <div v-click-outside="closeCategory" class="relative">
+        <div
+          @click.prevent="toggleCategory"
+          class="w-96 z-20 relative bg-green-500 cursor-pointer text-white py-4 px-6 rounded-full flex justify-between items-center"
+        >
+          <div class="min-w-max">
+            <img src="~/assets/images/menu-right.svg" alt="" />
+          </div>
+          <span>All Category</span>
+          <div class="min-w-max">
+            <img src="~/assets/images/chevron-down.svg" alt="" />
+          </div>
         </div>
-        <span>All Category</span>
-        <div class="min-w-max">
-          <img src="~/assets/images/chevron-down.svg" alt="" />
+
+        <!-- Category Menu -->
+        <div
+          v-bind:class="
+            isCategoryOpen ? 'block visible w-full ' : 'hidden invisible w-0'
+          "
+          class="absolute top-10 rounded-b-2xl transition ease-in-out -mt-4 z-10 bg-green-500"
+        >
+          <ul class="pt-6 pb-4">
+            <li>
+              <nuxt-link class="block px-6 py-2 text-white" to="/"
+                >Fruits</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="block px-6 py-2 text-white" to="/"
+                >Fruits</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="block px-6 py-2 text-white" to="/"
+                >Fruits</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="block px-6 py-2 text-white" to="/"
+                >Fruits</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="block px-6 py-2 text-white" to="/"
+                >Fruits</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="block px-6 py-2 text-white" to="/"
+                >Fruits</nuxt-link
+              >
+            </li>
+          </ul>
         </div>
       </div>
       <div class="w-full">
@@ -97,6 +141,19 @@
 <script>
 export default {
   name: 'Header',
+  data() {
+    return {
+      isCategoryOpen: false,
+    }
+  },
+  methods: {
+    toggleCategory() {
+      this.isCategoryOpen = !this.isCategoryOpen
+    },
+    closeCategory() {
+      this.isCategoryOpen = false
+    },
+  },
 }
 </script>
 

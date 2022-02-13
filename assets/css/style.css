@@ -9,6 +9,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-medium;
+}
+
 .container {
   @apply mx-auto;
   width: 1710px;
@@ -82,4 +92,13 @@ body {
 .category-carousel > svg:hover {
   background: #27ae60;
   stroke: #fff;
+}
+
+.product-info {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.single-product:hover .product-info {
+  display: block;
 }
