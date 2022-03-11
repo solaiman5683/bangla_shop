@@ -15,7 +15,7 @@
           >
             <div class="flex text-white gap-4 mb-6">
               <button class="w-12 h-12 rounded-full border border-2 shadow">
-                +
+                -
               </button>
               <span
                 class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center"
@@ -23,7 +23,7 @@
                 0</span
               >
               <button class="w-12 h-12 rounded-full border border-2 shadow">
-                -
+                +
               </button>
             </div>
             <button
@@ -34,7 +34,9 @@
             <div
               class="absolute bottom-0 w-full bg-gray-200 p-2 text-gray-600 text-lg text-center"
             >
-              <button>Details <span class="hover:ml-4">&#8594;</span></button>
+              <button @click.prevent="productDetails">
+                Details <span class="hover:ml-4">&#8594;</span>
+              </button>
             </div>
           </div>
         </div>
@@ -58,6 +60,24 @@
 <script>
 export default {
   name: 'SingleProduct',
+  props: ['product'],
+  data() {
+    return {
+      matched: false,
+      quantity: '',
+    }
+  },
+  methods: {
+    productDetails() {
+      this.$store.dispatch('product-details-modal/triggerModal', this.product)
+    },
+    addToCart(product, type) {
+      this.$store.dispatch('cart/addToCart', {
+        product: product,
+        type: type,
+      })
+    },
+  },
 }
 </script>
 

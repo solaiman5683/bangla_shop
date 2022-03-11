@@ -7,11 +7,13 @@
             <p class="text-green-500 font-medium text-3xl mb-4">
               Save up 30% off
             </p>
-            <h2 class="text-dark-500 font-bold text-7xl leading-tight mb-6">
+            <h2
+              class="text-dark-500 font-bold uppercase text-7xl leading-tight mb-6"
+            >
               Bengal Vegetable <br />
               farm Organic 100%
             </h2>
-            <p class="mb-6 w-3/4">
+            <p class="mb-8 w-3/4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
               aperiam nostrum possimus repellendus ad facere quas aspernatur
               necessitatibus!
@@ -23,25 +25,27 @@
           </div>
         </div>
       </div>
-      <div class="bg-green rounded-2xl px-32 pt-8">
-        <div class="flex items-center">
-          <div class="w-2/3">
-            <p class="text-green-500 font-medium text-3xl mb-4">
-              Save up 50% off
-            </p>
-            <h2 class="text-dark-500 font-bold text-7xl leading-tight mb-6">
-              Bengal Vegetable <br />
-              farm Organic 100%
-            </h2>
-            <p class="mb-6 w-3/4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              aperiam nostrum possimus repellendus ad facere quas aspernatur
-              necessitatibus!
-            </p>
-            <button class="btn">Shop Now</button>
+      <div class="rounded-2xl px-32 pt-8 hero2">
+        <div class="flex items-center h-full">
+          <div class="w-2/3 flex items-center text-white">
+            <div>
+              <p class="text-green-500 font-medium text-3xl mb-4">
+                Save up 50% off
+              </p>
+              <h2 class="font-bold uppercase text-7xl leading-tight mb-6">
+                Bengal Vegetable <br />
+                farm Organic 100%
+              </h2>
+              <p class="mb-8 w-3/4 text-gray-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                aperiam nostrum possimus repellendus ad facere quas aspernatur
+                necessitatibus!
+              </p>
+              <button class="btn">Shop Now</button>
+            </div>
           </div>
           <div class="w-1/3">
-            <img src="~/assets/images/hero.png" alt="" />
+            <!-- <img src="~/assets/images/hero.png" alt="" /> -->
           </div>
         </div>
       </div>
@@ -182,14 +186,7 @@
           class="category-carousel"
           v-bind="productCarouselSettings"
         >
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
+          <SingleProduct v-for="item in 9" />
 
           <template #prevArrow>
             <svg

@@ -25,10 +25,13 @@
       </div>
 
       <div class="min-w-max flex">
-        <nuxt-link to="/" class="w-14 h-14 hover:bg-gray-100 p-4 rounded-full">
+        <nuxt-link
+          to="/wishlist"
+          class="w-14 h-14 hover:bg-gray-100 p-4 rounded-full"
+        >
           <img src="~/assets/images/heart.svg" alt="" />
         </nuxt-link>
-        <nuxt-link class="relative" to="/">
+        <nuxt-link class="relative" to="/cart">
           <span
             class="w-14 h-14 hover:bg-gray-100 p-4 rounded-full flex items-center justify-center"
           >
@@ -39,7 +42,7 @@
             >0</span
           >
         </nuxt-link>
-        <nuxt-link to="/" class="flex items-center gap-1">
+        <nuxt-link to="/account" class="flex items-center gap-1">
           <span
             class="w-14 h-14 hover:bg-gray-100 p-4 rounded-full flex items-center justify-center"
           >
@@ -111,19 +114,16 @@
             <nuxt-link to="/">Home</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/">Shop</nuxt-link>
+            <nuxt-link to="/category">Category</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/">Pages</nuxt-link>
+            <nuxt-link to="/blogs">Blogs</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/">Blogs</nuxt-link>
+            <nuxt-link to="/contact">Contact</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/">Contact</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/">Trace Order</nuxt-link>
+            <nuxt-link to="/trace-order">Trace Order</nuxt-link>
           </li>
         </ul>
       </div>

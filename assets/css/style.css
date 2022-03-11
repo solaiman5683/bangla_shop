@@ -102,3 +102,11 @@ h6 {
 .single-product:hover .product-info {
   display: block;
 }
+
+.hero2 {
+  background-image: url('~/assets/images/herobg2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 750px;
+}
