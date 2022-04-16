@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <div class="container flex gap-4 my-14">
-      <div class="w-1/4 flex gap-3 items-center">
+    <div class="container grid grid-cols-1 md:grid-cols-2 p-4 sm:justify-center lg:grid-cols-4 gap-4 my-14">
+      <div class="w-full flex gap-3 items-center">
         <div class="min-w-max">
           <img
             width="100px"
@@ -15,7 +15,7 @@
           <p class="text-gray-400">Contact us 24 hours</p>
         </div>
       </div>
-      <div class="w-1/4 flex gap-3 items-center">
+      <div class="w-full flex gap-3 items-center">
         <div class="min-w-max">
           <img
             width="100px"
@@ -29,7 +29,7 @@
           <p class="text-gray-400">Contact us 24 hours</p>
         </div>
       </div>
-      <div class="w-1/4 flex gap-3 items-center">
+      <div class="w-full flex gap-3 items-center">
         <div class="min-w-max">
           <img
             width="100px"
@@ -43,7 +43,7 @@
           <p class="text-gray-400">Contact us 24 hours</p>
         </div>
       </div>
-      <div class="w-1/4 flex gap-3 items-center">
+      <div class="w-full flex gap-3 items-center">
         <div class="min-w-max">
           <img
             width="100px"
@@ -59,10 +59,10 @@
       </div>
     </div>
 
-    <div class="bg-gray-100">
-      <div class="container flex py-20">
-        <div class="w-2/4">
-          <nuxt-link to="/" class="flex items-center gap-4 mb-6">
+    <div class="bg-gray-100 p-4">
+      <div class="container flex flex-col lg:flex-row py-20">
+        <div class="lg:w-2/4 text-center lg:text-right w-full">
+          <nuxt-link to="/" class="flex items-center gap-4 justify-center lg:justify-right mb-6">
             <img
               src="~/assets/images/logo.svg"
               width="65px"
@@ -70,19 +70,19 @@
             />
             <h3 class="text-3xl">Bangla Shop</h3>
           </nuxt-link>
-          <p class="text-gray-400 w-3/4">
+          <p class="text-gray-400 lg:w-3/4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla diam
             ornare nam est gravida. Netus viverra rhoncus sit magna sapien ac
             eget parturient id. Est luctus dapibus quam aliquam in nisl turpis.
             Elit et dictum lacus morbi nec accumsan a in.
           </p>
-          <div class="mt-6 flex cursor-pointer">
+          <div class="mt-6 flex justify-center lg:justify-right cursor-pointer">
             <img src="~/assets/images/appstore.png" alt="" />
             <img src="~/assets/images/playstore.png" alt="" />
           </div>
         </div>
 
-        <div class="w-1/4">
+        <div class="md:w-1/4 text-center md:text-left mt-6">
           <h3 class="text-2xl font-medium text-gray-600 mb-6">About Us</h3>
           <ul class="about-links">
             <li class="mb-4">
@@ -113,7 +113,7 @@
           </ul>
         </div>
 
-        <div class="w-1/4">
+        <div class="md:w-1/4 text-center md:text-left">
           <h3 class="text-2xl font-medium text-gray-600 mb-6">Info</h3>
           <ul class="about-links">
             <li class="mb-4">
@@ -145,7 +145,7 @@
         </div>
       </div>
 
-      <div class="container flex pb-4 justify-between items-center">
+      <div class="container flex flex-col md:flex-row gap-4 pb-4 justify-between items-center">
         <div class="min-w-max">
           <ul class="flex">
             <li

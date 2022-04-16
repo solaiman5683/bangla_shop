@@ -1,38 +1,38 @@
 <template>
   <div class="p-6">
     <vue-slick-carousel :arrows="false" :dots="true">
-      <div class="bg-green rounded-2xl px-32 pt-8">
-        <div class="flex items-center">
-          <div class="w-2/3">
-            <p class="text-green-500 font-medium text-3xl mb-4">
+      <div class="bg-green rounded-2xl p-8 lg:px-32 pt-8">
+        <div class="flex flex-col-reverse gap-6 lg:flex-row items-center">
+          <div class="lg:w-2/3 w-full text-center">
+            <p class="text-green-500 font-medium lg:text-3xl mb-4">
               Save up 30% off
             </p>
             <h2
-              class="text-dark-500 font-bold uppercase text-7xl leading-tight mb-6"
+              class="text-dark-500 font-bold uppercase text-4xl lg:text-7xl leading-tight mb-6"
             >
               Bengal Vegetable <br />
               farm Organic 100%
             </h2>
-            <p class="mb-8 w-3/4">
+            <p class="mb-8 lg:w-3/4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
               aperiam nostrum possimus repellendus ad facere quas aspernatur
               necessitatibus!
             </p>
             <button class="btn">Shop Now</button>
           </div>
-          <div class="w-1/3">
+          <div class="lg:w-1/3 w-100">
             <img src="~/assets/images/hero.png" alt="" />
           </div>
         </div>
       </div>
-      <div class="rounded-2xl px-32 pt-8 hero2">
-        <div class="flex items-center h-full">
-          <div class="w-2/3 flex items-center text-white">
+      <div class="rounded-2xl lg:px-32 p-8 pt-8 hero2">
+        <div class="flex flex-col lg:flex-row items-center  justify-center h-full">
+          <div class="lg:w-2/3 w-full flex items-center text-white">
             <div>
               <p class="text-green-500 font-medium text-3xl mb-4">
                 Save up 50% off
               </p>
-              <h2 class="font-bold uppercase text-7xl leading-tight mb-6">
+              <h2 class="font-bold uppercase text-4xl lg:text-7xl leading-tight mb-6">
                 Bengal Vegetable <br />
                 farm Organic 100%
               </h2>
@@ -44,7 +44,7 @@
               <button class="btn">Shop Now</button>
             </div>
           </div>
-          <div class="w-1/3">
+          <div class="w-1/3 hidden">
             <!-- <img src="~/assets/images/hero.png" alt="" /> -->
           </div>
         </div>
@@ -160,11 +160,11 @@
       </section>
 
       <section class="py-8">
-        <div class="flex gap-6">
-          <div class="w-1/2">
+        <div class="flex flex-col lg:flex-row gap-6">
+          <div class="w-full lg:w-1/2">
             <img src="~/assets/images/promo1.png" alt="" />
           </div>
-          <div class="w-1/2">
+          <div class="w-full lg:w-1/2">
             <img src="~/assets/images/promo2.png" alt="" />
           </div>
         </div>
@@ -186,7 +186,7 @@
           class="category-carousel"
           v-bind="productCarouselSettings"
         >
-          <SingleProduct v-for="item in 9" />
+          <SingleProduct v-for="item in 9" v-bind:key="item" />
 
           <template #prevArrow>
             <svg
@@ -309,8 +309,8 @@
       </section>
       <!-- Collections -->
       <section class="py-8">
-        <div class="flex gap-4">
-          <div class="w-1/3 p-4 rounded-xl flex bg-yellow-100">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div class="w-full p-4 rounded-xl flex bg-yellow-100">
             <div class="flex py-4 pl-6 flex-col justify-around h-full w-1/2">
               <h3 class="text-3xl">Fresh Fruits Collection</h3>
               <nuxt-link
@@ -336,7 +336,7 @@
             </div>
           </div>
 
-          <div class="w-1/3 p-4 rounded-xl flex bg-green-200">
+          <div class="w-full p-4 rounded-xl flex bg-green-200">
             <div class="flex py-4 pl-6 flex-col justify-around h-full w-1/2">
               <h3 class="text-3xl">Vegetable Collection</h3>
               <nuxt-link
@@ -362,7 +362,7 @@
             </div>
           </div>
 
-          <div class="w-1/3 p-4 rounded-xl flex bg-yellow-200">
+          <div class="w-full p-4 rounded-xl flex bg-yellow-200">
             <div class="flex py-4 pl-6 flex-col justify-around h-full w-1/2">
               <h3 class="text-3xl">Grocery Item</h3>
               <nuxt-link
@@ -402,10 +402,56 @@ export default {
       categoryCarouselSettings: {
         slidesToShow: 6,
         slidesToScroll: 1,
+        responsive : [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       },
       productCarouselSettings: {
         slidesToShow: 5,
         slidesToScroll: 1,
+        responsive : [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       },
     }
   },

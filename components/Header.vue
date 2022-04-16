@@ -1,20 +1,20 @@
 <template>
   <div class="container py-6">
-    <div class="mb-6 flex justify-between items-center">
+    <div class="mb-6 flex flex-col lg:flex-row gap-4 justify-between items-center">
       <!--  Logo -->
       <nuxt-link to="/" class="flex items-center gap-4">
         <img src="~/assets/images/logo.svg" width="65px" alt="Bangla Store" />
         <h3 class="text-3xl">Bangla Shop</h3>
       </nuxt-link>
-      <div class="w-96">
+      <div class="max-w-96">
         <div
-          class="border border-gray-200 p-1 flex rounded-full min-w-max items-center"
+          class="border border-gray-200 p-1 flex rounded-full w-full overflow-hidden items-center"
         >
           <div class="min-w-max p-2">
             <img src="~/assets/images/search.svg" alt="search_icon" />
           </div>
           <input
-            class="p-2 focus:outline-none"
+            class="p-2 focus:outline-none w-full"
             type="search"
             placeholder="Search Here.... "
           />
@@ -52,7 +52,7 @@
         </nuxt-link>
       </div>
     </div>
-    <div class="flex items-center">
+    <div class="flex flex-col md:flex-row gap-4 items-center">
       <div v-click-outside="closeCategory" class="relative">
         <div
           @click.prevent="toggleCategory"

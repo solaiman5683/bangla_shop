@@ -21,7 +21,7 @@ h6 {
 
 .container {
   @apply mx-auto;
-  width: 1710px;
+  max-width: 1710px;
 }
 
 .bs-cart-icon {
